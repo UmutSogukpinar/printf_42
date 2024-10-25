@@ -65,8 +65,7 @@ int ft_print_adress(va_list args, char *base)
 
     num = (unsigned long long) va_arg(args, int);
     write(1, "0x", 2);
-    count = 0;
-    count += 2;
+    count = 2;
     count += ft_put_number((long long) num, "0123456789abcdef");
     return (count);
 }
