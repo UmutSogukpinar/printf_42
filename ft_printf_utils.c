@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: usogukpi <usogukpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 13:11:45 by usogukpi          #+#    #+#             */
-/*   Updated: 2024/10/23 21:22:35 by usogukpi         ###   ########.fr       */
+/*   Created: 2024/10/26 12:54:07 by usogukpi          #+#    #+#             */
+/*   Updated: 2024/10/27 13:02:21 by usogukpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,14 @@ int	ft_str_len(char *str)
 	return (i);
 }
 
-char	*ft_str_dup(char *s1)
+static char	*ft_str_dup(char *s1)
 {
 	int		i;
 	int		len;
 	char	*new;
 
+	if (!s1)
+		return (NULL);
 	len = ft_str_len(s1);
 	new = malloc((len + 1) * sizeof(char));
 	if (new == NULL)
@@ -50,14 +52,14 @@ char	*ft_str_dup(char *s1)
 	return (new);
 }
 
-int ft_print_str(va_list args)
+int	ft_print_str(va_list args)
 {
 	char	*str;
 	int		str_len;
 
-	str = ft_str_dup((char *)va_arg(args, int));
+	str = ft_str_dup(va_arg(args, char *));
 	str_len = 0;
-	if(!str)
+	if (!str)
 	{
 		write(1, "(null)", 6);
 		return (6);
