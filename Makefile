@@ -1,14 +1,38 @@
+# Makefile for the libftprintf library
+# This Makefile compiles the library from the source files
+# and creates an archive file named libftprintf.a
+# It also includes rules for cleaning up object files and the library
+# and for rebuilding everything from scratch.
+# Usage:
+# - `make` to compile the library
+# - `make clean` to remove object files
+# - `make fclean` to remove object files and the library
+# - `make re` to clean and then compile everything again
+
+# Name of the library
 NAME = libftprintf.a
+
+# Compiler and flags
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
-FILES = ft_printf.c \
-		ft_printf_utils.c \
-		ft_printf_utils2.c
+CFLAGS = -Wall -Wextra -Werror -Iincludes
+RM = rm -rf
 
-OBJS = $(FILES:.c=.o)
+# Directories paths
+SRCS_DIR = srcs
+UTILS_DIR = srcs/utils
+FORMAT_DIR = srcs/formats
 
-RM = rm -f
+# Source files
+SRCS =	$(SRCS_DIR)/ft_printf.c			\
+		$(FORMAT_DIR)/char_format.c		\
+		$(FORMAT_DIR)/number_format.c	\
+		$(FORMAT_DIR)/unknown_format.c	\
+		$(UTILS_DIR)/utils.c			
 
+# Object files
+OBJS = $(SRCS:.c=.o)
+
+# ====== Rules to compile the library ======
 all: $(NAME)
 
 $(NAME): $(OBJS)
