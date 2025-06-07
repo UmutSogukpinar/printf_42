@@ -18,4 +18,9 @@ typedef struct s_format
 
 }	t_format;
 
+
+void parse_flags(const char *format, t_printf *main, t_format *fmt);
+void parse_width(const char *format, t_printf *main, t_format *fmt);
+void parse_precision(const char *format, t_printf *main, t_format *fmt);
+
 #endif

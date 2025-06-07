@@ -23,6 +23,7 @@ RM = rm -rf
 SRCS_DIR = srcs
 UTILS_DIR = srcs/utils
 FORMAT_DIR = srcs/formats
+BONUS_DIR = bonus
 
 # Bonus directories paths
 
@@ -33,8 +34,9 @@ SRCS =	$(SRCS_DIR)/ft_printf.c			\
 		$(FORMAT_DIR)/unknown_format.c	\
 		$(UTILS_DIR)/utils.c			
 
-
-BONUS_SRCS =	$(SRCS_DIR)/ft_printf.c	\
+# Bonus source files
+BONUS_SRCS =	$(BONUS_DIR)/ft_printf.c	\
+				$(BONUS_DIR)/parser.c		\
 				$(UTILS_DIR)/utils.c	
 
 # Object files

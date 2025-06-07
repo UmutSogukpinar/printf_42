@@ -58,8 +58,8 @@ static void handle_format(const char *format, t_printf *main, va_list args)
 
     init_format(&fmt);
     parse_flags(format, main, &fmt);
-    parse_width(format, main, &fmt, args);
-    parse_precision(format, main, &fmt, args);
+    parse_width(format, main, &fmt);
+    parse_precision(format, main, &fmt);
 
     fmt.specifier = format[main->index];
 
