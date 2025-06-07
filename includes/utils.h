@@ -56,21 +56,6 @@ typedef struct s_printf
 
 }	t_printf;
 
-typedef struct s_format
-{
-	t_bool	flag_minus;
-	t_bool	flag_plus;
-	t_bool	flag_space;
-	t_bool	flag_zero;
-	t_bool	flag_hash;
-
-	int		width;
-	int		precision;
-	t_bool	precision_specified;
-	char	specifier;
-
-}	t_format;
-
 // ============ Function Prototypes ============
 
 void	put_base(t_printf *main, unsigned long long num, const char *base);

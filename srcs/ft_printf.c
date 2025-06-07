@@ -32,7 +32,7 @@ static void	printf_loop(const char *format, t_printf *main, va_list args)
 		}
 		else
 		{
-			if (main->len < BUFFER_SIZE - 1)
+			if (main->len < BUFFER_SIZE)
 			{
 				main->buffer[main->len++] = format[main->index];
 			}
