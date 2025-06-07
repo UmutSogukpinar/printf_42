@@ -1,6 +1,14 @@
 #include "utils.h"
 #include <unistd.h>
 
+void	init_printf(t_printf *main)
+{
+	main->len = 0;
+	main->index = 0;
+	main->total_len = 0;
+	ft_bzero(main->buffer, BUFFER_SIZE);
+}
+
 void	flush_printf(t_printf *main)
 {
 	if (main->len > 0)

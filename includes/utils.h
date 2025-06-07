@@ -77,5 +77,6 @@ void	put_base(t_printf *main, unsigned long long num, const char *base);
 size_t	ft_strlen(const char *s);
 void	ft_bzero(void *s, size_t n);
 void	flush_printf(t_printf *main);
+void	init_printf(t_printf *main);
 
 # endif

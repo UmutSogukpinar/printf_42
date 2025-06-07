@@ -3,7 +3,6 @@
 
 static void	printf_loop(const char *format, t_printf *main, va_list args);
 static void	handle_format(char format_char, t_printf *main, va_list args);
-static void	init_printf(t_printf *printf);
 
 int	ft_printf(const char *format, ...)
 {
@@ -67,12 +66,4 @@ static void	handle_format(char format_char, t_printf *main, va_list args)
 		put_percent(main);
 	else
 		handle_unknown_format(main, format_char);
-}
-
-static void	init_printf(t_printf *main)
-{
-	main->len = 0;
-	main->index = 0;
-	main->total_len = 0;
-	ft_bzero(main->buffer, BUFFER_SIZE);
 }
