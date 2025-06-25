@@ -5,15 +5,15 @@ void parse_flags(const char *format, t_printf *main, t_format *fmt)
     while (1)
     {
         if (format[main->index] == '-')
-            fmt->flag_minus = 1;
+            fmt->flag_minus = TRUE;
         else if (format[main->index] == '+')
-            fmt->flag_plus = 1;
+            fmt->flag_plus = TRUE;
         else if (format[main->index] == ' ')
-            fmt->flag_space = 1;
+            fmt->flag_space = TRUE;
         else if (format[main->index] == '0')
-            fmt->flag_zero = 1;
+            fmt->flag_zero = TRUE;
         else if (format[main->index] == '#')
-            fmt->flag_hash = 1;
+            fmt->flag_hash = TRUE;
         else
             break;
         (main->index)++;

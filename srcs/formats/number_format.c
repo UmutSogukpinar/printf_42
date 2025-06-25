@@ -29,11 +29,6 @@ void put_unsigned_integer(t_printf *main, unsigned int number)
 	long long number_ll;
 
 	number_ll = (long long) number;
-	if (number_ll < 0)
-	{
-		put_char(main, '-');
-		number_ll = -number_ll;
-	}
 	put_base(main, (unsigned long long)number, BASE_DECIMAL);
 }
 

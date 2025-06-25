@@ -23,4 +23,7 @@ void parse_flags(const char *format, t_printf *main, t_format *fmt);
 void parse_width(const char *format, t_printf *main, t_format *fmt);
 void parse_precision(const char *format, t_printf *main, t_format *fmt);
 
+char	*ft_strdup(const char *s1);
+void	*ft_memset(void *b, int c, size_t len);
+
 #endif

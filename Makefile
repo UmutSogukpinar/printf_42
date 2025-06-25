@@ -35,8 +35,9 @@ SRCS =	$(SRCS_DIR)/ft_printf.c			\
 		$(UTILS_DIR)/utils.c			
 
 # Bonus source files
-BONUS_SRCS =	$(BONUS_DIR)/ft_printf.c	\
-				$(BONUS_DIR)/parser.c		\
+BONUS_SRCS =	$(BONUS_DIR)/ft_printf_bonus.c	\
+				$(BONUS_DIR)/parser_bonus.c		\
+				$(BONUS_DIR)/flags_bonus.c		\
 				$(UTILS_DIR)/utils.c	
 
 # Object files

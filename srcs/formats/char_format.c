@@ -18,7 +18,6 @@ void	put_string(t_printf *main, char *str)
 
 	if (!str)
 		str = "(null)";
-
 	while (str[i])
 	{
 		if (main->len == BUFFER_SIZE)
